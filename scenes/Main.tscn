@@ -16,4 +16,5 @@ script = ExtResource( 4 )
 
 [node name="Player2" parent="." instance=ExtResource( 1 )]
 playerType = 1
+
 [connection signal="start_game" from="HUD" to="." method="new_game"]

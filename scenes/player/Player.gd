@@ -39,5 +39,6 @@ func _process(delta):
 	
 	position.y = clamp(position.y, 0+size_half.y, window_size.y-size_half.y)
 	
-	
-	
+
+func _on_Ball_body_entered(body):
+	body.setVelocity()
