@@ -17,4 +17,4 @@ func _process(delta):
 	position += velocity * speed * delta
 
 func _on_Ball_area_entered(area):
-	velocity = Vector2(-velocity.x, -velocity.y)
+	velocity = velocity - 2 * area.normal * (area.normal.dot(velocity))

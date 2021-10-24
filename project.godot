@@ -13,9 +13,21 @@ _global_script_classes=[ {
 "class": "Ball",
 "language": "GDScript",
 "path": "res://scenes/ball/Ball.gd"
+}, {
+"base": "Area2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://scenes/player/Player.gd"
+}, {
+"base": "Area2D",
+"class": "Wall",
+"language": "GDScript",
+"path": "res://scenes/wall/Wall.gd"
 } ]
 _global_script_class_icons={
-"Ball": ""
+"Ball": "",
+"Player": "",
+"Wall": ""
 }
 
 [application]
