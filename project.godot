@@ -14,7 +14,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scenes/ball/Ball.gd"
 }, {
-"base": "Area2D",
+"base": "Wall",
 "class": "Player",
 "language": "GDScript",
 "path": "res://scenes/player/Player.gd"

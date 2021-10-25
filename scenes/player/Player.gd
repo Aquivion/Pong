@@ -1,4 +1,4 @@
-extends Area2D
+extends Wall
 
 class_name Player
 
@@ -8,7 +8,6 @@ enum PlayerType {
 }
 
 export (PlayerType) var playerType
-export var normal: Vector2
 
 var speed = 200
 var window_size = Vector2()
@@ -35,3 +34,8 @@ func _process(delta):
 	position.y += velocity * speed * delta
 	
 	position.y = clamp(position.y, 0+size_half.y, window_size.y-size_half.y)
+
+
+func _on_Player_area_entered(ball: Ball):
+	if ball != null:
+		ball.velocity = ball.velocity - 2 * self.normal * (self.normal.dot(ball.velocity))

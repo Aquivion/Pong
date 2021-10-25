@@ -2,6 +2,7 @@ extends Area2D
 
 class_name Ball
 
+
 var velocity = Vector2(0, 0)
 var speed = 200
 
@@ -15,6 +16,3 @@ func _ready():
 
 func _process(delta):
 	position += velocity * speed * delta
-
-func _on_Ball_area_entered(area):
-	velocity = velocity - 2 * area.normal * (area.normal.dot(velocity))

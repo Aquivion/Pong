@@ -26,11 +26,13 @@ position = Vector2( 360, 240 )
 [node name="PlayerLeft" parent="." instance=ExtResource( 1 )]
 position = Vector2( 5, 240 )
 normal = Vector2( 1, 0 )
+wallType = 4
 
 [node name="PlayerRight" parent="." instance=ExtResource( 1 )]
 position = Vector2( 715, 240 )
-playerType = 1
 normal = Vector2( -1, 0 )
+wallType = 4
+playerType = 1
 
 [node name="WallLeft" parent="." instance=ExtResource( 5 )]
 position = Vector2( -10, 240 )
@@ -42,6 +44,7 @@ shape = SubResource( 1 )
 [node name="WallRight" parent="." instance=ExtResource( 5 )]
 position = Vector2( 730, 240 )
 normal = Vector2( -1, 0 )
+wallType = 1
 
 [node name="CollisionShape2D" parent="WallRight" index="0"]
 shape = SubResource( 2 )
@@ -49,14 +52,18 @@ shape = SubResource( 2 )
 [node name="WallTop" parent="." instance=ExtResource( 5 )]
 position = Vector2( 360, -10 )
 normal = Vector2( 0, 1 )
+wallType = 2
 
 [node name="WallBottom" parent="." instance=ExtResource( 5 )]
 position = Vector2( 360, 490 )
 normal = Vector2( 0, -1 )
+wallType = 3
 
 [node name="CollisionShape2D" parent="WallBottom" index="0"]
 shape = SubResource( 3 )
 [connection signal="start_game" from="HUD" to="." method="new_game"]
+[connection signal="score_point" from="WallLeft" to="." method="_on_WallLeft_score_point"]
+[connection signal="score_point" from="WallRight" to="." method="_on_WallRight_score_point"]
 
 [editable path="WallLeft"]
 
