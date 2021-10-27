@@ -24,12 +24,12 @@ script = ExtResource( 4 )
 position = Vector2( 360, 240 )
 
 [node name="PlayerLeft" parent="." instance=ExtResource( 1 )]
-position = Vector2( 5, 240 )
+position = Vector2( 45, 240 )
 normal = Vector2( 1, 0 )
 wallType = 4
 
 [node name="PlayerRight" parent="." instance=ExtResource( 1 )]
-position = Vector2( 715, 240 )
+position = Vector2( 675, 240 )
 normal = Vector2( -1, 0 )
 wallType = 4
 playerType = 1

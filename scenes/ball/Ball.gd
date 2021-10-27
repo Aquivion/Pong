@@ -2,17 +2,16 @@ extends Area2D
 
 class_name Ball
 
-
-var velocity = Vector2(0, 0)
+var dir = Vector2(0, 0)
 var speed = 200
 
-func setVelocity(x : float, y: float):
-	velocity.x = x
-	velocity.y = y
-	velocity = velocity.normalized()
+func setDir(x : float, y: float):
+	dir.x = x
+	dir.y = y
+	dir = dir.normalized()
 
 func _ready():
 	pass
 
 func _process(delta):
-	position += velocity * speed * delta
+	position += dir * speed * delta
