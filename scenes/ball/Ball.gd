@@ -3,7 +3,7 @@ extends Area2D
 class_name Ball
 
 var dir = Vector2(0, 0)
-var speed = 200
+var speed = 400
 
 func setDir(x : float, y: float):
 	dir.x = x
