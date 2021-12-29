@@ -9,7 +9,7 @@ enum PlayerType {
 
 export (PlayerType) var playerType
 
-var speed = 200
+var speed = 400
 var windowSize = Vector2()
 var sizeHalf = Vector2()
 
