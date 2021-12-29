@@ -66,14 +66,12 @@ wallType = 3
 
 [node name="CollisionShape2D" parent="WallBottom" index="0"]
 shape = SubResource( 3 )
+
 [connection signal="start_game" from="HUD" to="." method="new_game"]
 [connection signal="score_point" from="WallLeft" to="." method="_on_WallLeft_score_point"]
 [connection signal="score_point" from="WallRight" to="." method="_on_WallRight_score_point"]
 
 [editable path="WallLeft"]
-
 [editable path="WallRight"]
-
 [editable path="WallTop"]
-
 [editable path="WallBottom"]

@@ -11,7 +11,8 @@ func setDir(x : float, y: float):
 	dir = dir.normalized()
 
 func _ready():
-	pass
+	$CollisionShape2D.shape.radius = $Sprite.texture.get_width() / 2
+	print($CollisionShape2D.shape.radius)
 
 func _process(delta):
 	position += dir * speed * delta

@@ -16,6 +16,7 @@ var sizeHalf = Vector2()
 func _ready():
 	windowSize = get_viewport_rect().size
 	sizeHalf = $Sprite.texture.get_size() / 2
+	$CollisionShape2D.shape.extents = Vector2($Sprite.texture.get_width() / 2, $Sprite.texture.get_height() / 2)
 
 func _process(delta):
 	var dir = 0
